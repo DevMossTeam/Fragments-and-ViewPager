@@ -1,9 +1,11 @@
 <resources>
-    <!-- Warna utama aplikasi -->
+    <!-- Primary colors -->
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <!-- Warna putih -->
-    <color name="white">#FFFFFF</color>
+    <!-- Tab colors -->
+    <color name="tabSelectedColor">#FFFFFF</color> <!-- White for selected -->
+    <color name="tabUnselectedColor">#B0BEC5</color> <!-- Light gray for unselected -->
+    <color name="tabBackgroundColor">#6200EE</color> <!-- Tab background color -->
 </resources>

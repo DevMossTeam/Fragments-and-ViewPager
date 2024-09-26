@@ -39,16 +39,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+                tabLayout.setBackgroundColor(getResources().getColor(R.color.tabBackgroundColor)); // Set background color
+                tabLayout.setTabTextColors(getResources().getColor(R.color.tabUnselectedColor), getResources().getColor(R.color.tabSelectedColor)); // Set text colors
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) { }
+            public void onTabUnselected(TabLayout.Tab tab) {
+                // Optional: Set the unselected tab text color or background
+            }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab) { }
+            public void onTabReselected(TabLayout.Tab tab) {
+                // Optional: Handle reselection if necessary
+            }
         });
 
-        // Set tab text colors
-        tabLayout.setTabTextColors(getResources().getColor(R.color.white), getResources().getColor(R.color.white));
+        // Set initial colors
+        tabLayout.setBackgroundColor(getResources().getColor(R.color.tabBackgroundColor));
+        tabLayout.setTabTextColors(getResources().getColor(R.color.tabUnselectedColor), getResources().getColor(R.color.tabSelectedColor));
     }
 }
