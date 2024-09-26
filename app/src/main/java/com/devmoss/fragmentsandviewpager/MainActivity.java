@@ -2,7 +2,6 @@ package com.devmoss.fragmentsandviewpager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
@@ -15,19 +14,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        // Setup Toolbar
+        Toolbar toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        // Setup TabLayout and ViewPager
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        ViewPager viewPager = findViewById(R.id.view_pager);
+
+        // Add tabs to the TabLayout
         tabLayout.addTab(tabLayout.newTab().setText("Home"));
         tabLayout.addTab(tabLayout.newTab().setText("About"));
         tabLayout.addTab(tabLayout.newTab().setText("Contact"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
-        final TabsAdapter adapter = new TabsAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        // Setup ViewPager with TabsAdapter
+        TabsAdapter adapter = new TabsAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
+        // Link TabLayout and ViewPager
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -42,5 +47,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) { }
         });
+
+        // Set tab text colors
+        tabLayout.setTabTextColors(getResources().getColor(R.color.white), getResources().getColor(R.color.white));
     }
 }
