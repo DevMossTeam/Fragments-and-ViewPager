@@ -1,11 +1,8 @@
 <resources>
-    <!-- Primary colors -->
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#3F088C</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-
-    <!-- Tab colors -->
-    <color name="tabSelectedColor">#FFFFFF</color> <!-- White for selected -->
-    <color name="tabUnselectedColor">#B0BEC5</color> <!-- Light gray for unselected -->
-    <color name="tabBackgroundColor">#6200EE</color> <!-- Tab background color -->
+    <color name="tabSelectedColor">#FFFFFF</color>
+    <color name="tabUnselectedColor">#B0BEC5</color>
+    <color name="tabBackgroundColor">#6200EE</color>
 </resources>

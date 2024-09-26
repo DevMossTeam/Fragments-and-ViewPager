@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
-
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                // Optional: Set the unselected tab text color or background
+                // Optional: You can implement behavior for unselected tabs if needed
             }
 
             @Override
